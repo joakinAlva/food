@@ -1,0 +1,41 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.microservice.food",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "6.10.1",
+    "applicationType": "microservice",
+    "baseName": "food",
+    "packageName": "com.microservice.food",
+    "packageFolder": "com/microservice/food",
+    "serverPort": "8081",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "OGRmZDYxMDEwZWM2M2VlZmZiMmViOWNjZTIwYWM3ZTA5M2EwNDc2MTcyMDJkMmJiZTNmNDgxOWMwYTM0N2Y2NzgwYzc4ZjY0Nzg1ZWFmNDE4NGNlZTcyNjNlZGU2MDZjY2U3ZjZkZWZlZDkzZGNmNDQzZGM2NDAxOWEwMWY2MTI=",
+    "embeddableLaunchScript": false,
+    "creationTimestamp": 1596759273085,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "clientPackageManager": "npm",
+    "nativeLanguage": "en",
+    "languages": ["en"],
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
