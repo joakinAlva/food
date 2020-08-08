@@ -1,0 +1,38 @@
+{
+  "name": "SeccionMenuRestaurantePlatillo",
+  "fields": [
+    {
+      "fieldName": "tipoPlatillo",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "platillo",
+      "otherEntityRelationshipName": "seccionMenuRestaurantes",
+      "relationshipName": "platillos",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "menuRestaurante",
+      "otherEntityRelationshipName": "seccionMenuRestaurantePlatillos",
+      "relationshipName": "menuRestaurante",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200808212238",
+  "entityTableName": "seccion_menu_restaurante_platillo",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "food",
+  "applications": "*",
+  "microserviceName": "food"
+}

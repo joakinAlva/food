@@ -1,0 +1,70 @@
+entity Restaurante {
+	nombre String,
+    descripcion String,
+    direccion String,
+    calificacion Long,
+    imagenFondoSrc String,
+    imagenPerfilSrc String ,
+}
+
+entity MenuRestaurante {
+	menuRestaurante String
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity Platillo {
+	fotoSrc String,
+	horario String,
+	precio Long
+}
+
+entity CategoriaPlatillo {
+	categoria String,
+    imagenSrc String
+}
+
+entity TipoPlatillo {
+	tipoPlatillo String
+}
+
+entity MenuRestaurantePlatillo {
+	tipoPlatillo String
+}
+
+relationship OneToMany {
+	Restaurante{platillos} to Platillo {restaurante}
+}
+
+relationship OneToMany {
+	Restaurante{menuRestaurantes} to MenuRestaurante{restaurante}
+}
+
+relationship OneToMany {
+	MenuRestaurante{menuRestaurantePlatillo} to MenuRestaurantePlatillo{menuRestaurante}
+}
+
+relationship ManyToMany {
+	MenuRestaurantePlatillo{platillos} to Platillo{menuRestaurantePlatillo}
+}
+
+relationship OneToMany {
+CategoriaPlatillo{platillos} to Platillo{categoriaPlatillo}
+}
+
+relationship OneToMany {
+TipoPlatillo{platillos} to Platillo{tipoPlatillo}
+}
+
+
+paginate Restaurante with pagination
+paginate Platillo with pagination
+
+// Use Data Transfert Objects (DTO)
+ dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

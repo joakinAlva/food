@@ -1,0 +1,29 @@
+{
+  "name": "TipoPlatillo",
+  "fields": [
+    {
+      "fieldName": "tipoPlatillo",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "platillo",
+      "otherEntityRelationshipName": "tipoPlatillo",
+      "relationshipName": "platillos"
+    }
+  ],
+  "changelogDate": "20200808212138",
+  "entityTableName": "tipo_platillo",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "food",
+  "applications": "*",
+  "microserviceName": "food"
+}

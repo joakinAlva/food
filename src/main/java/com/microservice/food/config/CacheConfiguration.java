@@ -46,6 +46,19 @@ public class CacheConfiguration {
     @Bean
     public JCacheManagerCustomizer cacheManagerCustomizer() {
         return cm -> {
+            createCache(cm, com.microservice.food.domain.Restaurante.class.getName());
+            createCache(cm, com.microservice.food.domain.Restaurante.class.getName() + ".platillos");
+            createCache(cm, com.microservice.food.domain.Restaurante.class.getName() + ".menuRestaurantes");
+            createCache(cm, com.microservice.food.domain.MenuRestaurante.class.getName());
+            createCache(cm, com.microservice.food.domain.MenuRestaurante.class.getName() + ".menuRestaurantePlatillos");
+            createCache(cm, com.microservice.food.domain.Platillo.class.getName());
+            createCache(cm, com.microservice.food.domain.Platillo.class.getName() + ".menuRestaurantePlatillos");
+            createCache(cm, com.microservice.food.domain.CategoriaPlatillo.class.getName());
+            createCache(cm, com.microservice.food.domain.CategoriaPlatillo.class.getName() + ".platillos");
+            createCache(cm, com.microservice.food.domain.TipoPlatillo.class.getName());
+            createCache(cm, com.microservice.food.domain.TipoPlatillo.class.getName() + ".platillos");
+            createCache(cm, com.microservice.food.domain.MenuRestaurantePlatillo.class.getName());
+            createCache(cm, com.microservice.food.domain.MenuRestaurantePlatillo.class.getName() + ".platillos");
             // jhipster-needle-ehcache-add-entry
         };
     }

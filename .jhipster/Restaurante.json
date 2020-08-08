@@ -1,0 +1,55 @@
+{
+  "name": "Restaurante",
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "direccion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "calificacion",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "imagenFondoSrc",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "imagenPerfilSrc",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "platillo",
+      "otherEntityRelationshipName": "restaurante",
+      "relationshipName": "platillos"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "menuRestaurante",
+      "otherEntityRelationshipName": "restaurante",
+      "relationshipName": "menuRestaurantes"
+    }
+  ],
+  "changelogDate": "20200808211738",
+  "entityTableName": "restaurante",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "food",
+  "applications": "*",
+  "microserviceName": "food"
+}

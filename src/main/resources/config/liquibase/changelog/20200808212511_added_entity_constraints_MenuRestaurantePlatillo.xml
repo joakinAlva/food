@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity MenuRestaurantePlatillo.
+    -->
+    <changeSet id="20200808212511-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="menu_restaurante_platillo_id"
+                                 baseTableName="menu_restaurante_platillo_platillos"
+                                 constraintName="menu_restaurante_platillo_plati_menu_restaurante_platillo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="menu_restaurante_platillo"/>
+
+        <addForeignKeyConstraint baseColumnNames="platillos_id"
+                                 baseTableName="menu_restaurante_platillo_platillos"
+                                 constraintName="fk_menu_restaurante_platillo_platillos_platillos_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="platillo"/>
+        
+        <addForeignKeyConstraint baseColumnNames="menu_restaurante_id"
+                                 baseTableName="menu_restaurante_platillo"
+                                 constraintName="fk_menu_restaurante_platillo_menu_restaurante_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="menu_restaurante"/>
+
+    </changeSet>
+</databaseChangeLog>

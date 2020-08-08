@@ -1,0 +1,61 @@
+{
+  "name": "Platillo",
+  "fields": [
+    {
+      "fieldName": "fotoSrc",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "horario",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "precio",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "restaurante",
+      "otherEntityRelationshipName": "platillos",
+      "relationshipName": "restaurante",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "categoriaPlatillo",
+      "otherEntityRelationshipName": "platillos",
+      "relationshipName": "categoriaPlatillo",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "tipoPlatillo",
+      "otherEntityRelationshipName": "platillos",
+      "relationshipName": "tipoPlatillo",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "menuRestaurantePlatillo",
+      "otherEntityRelationshipName": "platillos",
+      "relationshipName": "menuRestaurantePlatillo",
+      "otherEntityField": "id",
+      "ownerSide": false
+    }
+  ],
+  "changelogDate": "20200808211938",
+  "javadoc": "not an ignored comment",
+  "entityTableName": "platillo",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "food",
+  "applications": "*",
+  "microserviceName": "food"
+}
