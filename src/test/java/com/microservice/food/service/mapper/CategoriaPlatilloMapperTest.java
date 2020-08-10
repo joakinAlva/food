@@ -10,13 +10,13 @@ public class CategoriaPlatilloMapperTest {
 
    /* @BeforeEach
     public void setUp() {
-        categoriaPlatilloMapper = new CategoriaPlatilloMapper();
-    }*/
+        categoriaPlatilloMapper = new CategoriaPlatilloMapperImpl();
+    }
 
     @Test
     public void testEntityFromId() {
         Long id = 1L;
         assertThat(categoriaPlatilloMapper.fromId(id).getId()).isEqualTo(id);
         assertThat(categoriaPlatilloMapper.fromId(null)).isNull();
-    }
+    }*/
 }

@@ -8,7 +8,7 @@ public class MenuRestaurantePlatilloMapperTest {
 
     private MenuRestaurantePlatilloMapper menuRestaurantePlatilloMapper;
 
-   /* @BeforeEach
+    /*@BeforeEach
     public void setUp() {
         menuRestaurantePlatilloMapper = new MenuRestaurantePlatilloMapperImpl();
     }*/
