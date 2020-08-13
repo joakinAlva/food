@@ -1,0 +1,33 @@
+{
+  "name": "Extra",
+  "fields": [
+    {
+      "fieldName": "extra",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "precio",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "extrasPlatillo",
+      "otherEntityRelationshipName": "extra",
+      "relationshipName": "extrasPlatillos"
+    }
+  ],
+  "changelogDate": "20200813010551",
+  "entityTableName": "extra",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "food",
+  "applications": "*",
+  "microserviceName": "food"
+}

@@ -16,6 +16,12 @@
   ],
   "relationships": [
     {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "extrasPlatillo",
+      "otherEntityRelationshipName": "platillo",
+      "relationshipName": "extrasPlatillos"
+    },
+    {
       "relationshipType": "many-to-one",
       "otherEntityName": "restaurante",
       "otherEntityRelationshipName": "platillos",

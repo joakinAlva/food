@@ -1,0 +1,29 @@
+{
+  "name": "OpcionPlatillo",
+  "fields": [
+    {
+      "fieldName": "opcionPlatillo",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "opcionesPlatillos",
+      "otherEntityRelationshipName": "opcionPlatillo",
+      "relationshipName": "opcionesPlatillos"
+    }
+  ],
+  "changelogDate": "20200813012950",
+  "entityTableName": "opcion_platillo",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "food",
+  "applications": "*",
+  "microserviceName": "food"
+}

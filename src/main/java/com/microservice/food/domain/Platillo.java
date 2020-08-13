@@ -34,6 +34,10 @@ public class Platillo implements Serializable {
     @Column(name = "precio")
     private Long precio;
 
+    @OneToMany(mappedBy = "platillo")
+    @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+    private Set<ExtrasPlatillo> extrasPlatillos = new HashSet<>();
+
     @ManyToOne
     @JsonIgnoreProperties(value = "platillos", allowSetters = true)
     private Restaurante restaurante;
@@ -97,6 +101,31 @@ public class Platillo implements Serializable {
 
     public void setPrecio(Long precio) {
         this.precio = precio;
+    }
+
+    public Set<ExtrasPlatillo> getExtrasPlatillos() {
+        return extrasPlatillos;
+    }
+
+    public Platillo extrasPlatillos(Set<ExtrasPlatillo> extrasPlatillos) {
+        this.extrasPlatillos = extrasPlatillos;
+        return this;
+    }
+
+    public Platillo addExtrasPlatillos(ExtrasPlatillo extrasPlatillo) {
+        this.extrasPlatillos.add(extrasPlatillo);
+        extrasPlatillo.setPlatillo(this);
+        return this;
+    }
+
+    public Platillo removeExtrasPlatillos(ExtrasPlatillo extrasPlatillo) {
+        this.extrasPlatillos.remove(extrasPlatillo);
+        extrasPlatillo.setPlatillo(null);
+        return this;
+    }
+
+    public void setExtrasPlatillos(Set<ExtrasPlatillo> extrasPlatillos) {
+        this.extrasPlatillos = extrasPlatillos;
     }
 
     public Restaurante getRestaurante() {

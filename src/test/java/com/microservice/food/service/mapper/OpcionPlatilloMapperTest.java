@@ -4,19 +4,19 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class PlatilloMapperTest {
+public class OpcionPlatilloMapperTest {
 
-    private PlatilloMapper platilloMapper;
+    private OpcionPlatilloMapper opcionPlatilloMapper;
 
    /* @BeforeEach
     public void setUp() {
-        platilloMapper = new PlatilloMapperImpl();
+        opcionPlatilloMapper = new OpcionPlatilloMapperImpl();
     }*/
 
     @Test
     public void testEntityFromId() {
         Long id = 1L;
-        assertThat(platilloMapper.fromId(id).getId()).isEqualTo(id);
-        assertThat(platilloMapper.fromId(null)).isNull();
+        assertThat(opcionPlatilloMapper.fromId(id).getId()).isEqualTo(id);
+        assertThat(opcionPlatilloMapper.fromId(null)).isNull();
     }
 }

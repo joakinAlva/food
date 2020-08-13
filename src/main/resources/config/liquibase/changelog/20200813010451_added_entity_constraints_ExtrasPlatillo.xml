@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity ExtrasPlatillo.
+    -->
+    <changeSet id="20200813010451-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="extra_id"
+                                 baseTableName="extras_platillo"
+                                 constraintName="fk_extras_platillo_extra_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="extra"/>
+
+        <addForeignKeyConstraint baseColumnNames="platillo_id"
+                                 baseTableName="extras_platillo"
+                                 constraintName="fk_extras_platillo_platillo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="platillo"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -32,6 +32,37 @@ entity MenuRestaurantePlatillo {
 	tipoPlatillo String
 }
 
+entity ExtrasPlatillo{
+ 	
+}
+
+entity Extra {
+	extra String,
+    precio String
+}
+
+entity OpcionesPlatillos {
+	descripcionOpcion String,
+    precio String 
+}
+
+entity OpcionPlatillo {
+	opcionPlatillo String
+}
+
+relationship OneToMany {
+	OpcionPlatillo{opcionesPlatillos} to  OpcionesPlatillos{opcionPlatillo}
+}
+
+
+relationship OneToMany {
+	Extra{extrasPlatillos} to ExtrasPlatillo {extra}
+}
+
+relationship OneToMany {
+	Platillo{extrasPlatillos} to ExtrasPlatillo{platillo}
+}
+
 relationship OneToMany {
 	Restaurante{platillos} to Platillo {restaurante}
 }

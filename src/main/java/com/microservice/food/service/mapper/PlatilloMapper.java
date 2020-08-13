@@ -17,6 +17,8 @@ public interface PlatilloMapper extends EntityMapper<PlatilloDTO, Platillo> {
     @Mapping(source = "tipoPlatillo.id", target = "tipoPlatilloId")
     PlatilloDTO toDto(Platillo platillo);
 
+    @Mapping(target = "extrasPlatillos", ignore = true)
+    @Mapping(target = "removeExtrasPlatillos", ignore = true)
     @Mapping(source = "restauranteId", target = "restaurante")
     @Mapping(source = "categoriaPlatilloId", target = "categoriaPlatillo")
     @Mapping(source = "tipoPlatilloId", target = "tipoPlatillo")

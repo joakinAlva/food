@@ -20,10 +20,16 @@
     <include file="config/liquibase/changelog/20200808212038_added_entity_CategoriaPlatillo.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20200808212138_added_entity_TipoPlatillo.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20200808212511_added_entity_MenuRestaurantePlatillo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200813010451_added_entity_ExtrasPlatillo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200813010551_added_entity_Extra.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200813012850_added_entity_OpcionesPlatillos.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200813012950_added_entity_OpcionPlatillo.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="config/liquibase/changelog/20200808211838_added_entity_constraints_MenuRestaurante.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20200808211938_added_entity_constraints_Platillo.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20200808212511_added_entity_constraints_MenuRestaurantePlatillo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200813010451_added_entity_constraints_ExtrasPlatillo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200813012850_added_entity_constraints_OpcionesPlatillos.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>
