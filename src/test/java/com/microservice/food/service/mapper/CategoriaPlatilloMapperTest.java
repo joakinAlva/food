@@ -8,15 +8,15 @@ public class CategoriaPlatilloMapperTest {
 
     private CategoriaPlatilloMapper categoriaPlatilloMapper;
 
-   /* @BeforeEach
+    /*@BeforeEach
     public void setUp() {
         categoriaPlatilloMapper = new CategoriaPlatilloMapperImpl();
-    }
+    }*/
 
     @Test
     public void testEntityFromId() {
         Long id = 1L;
         assertThat(categoriaPlatilloMapper.fromId(id).getId()).isEqualTo(id);
         assertThat(categoriaPlatilloMapper.fromId(null)).isNull();
-    }*/
+    }
 }

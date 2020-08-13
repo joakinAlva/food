@@ -8,7 +8,7 @@ public class RestauranteMapperTest {
 
     private RestauranteMapper restauranteMapper;
 
-    /*@BeforeEach
+   /* @BeforeEach
     public void setUp() {
         restauranteMapper = new RestauranteMapperImpl();
     }*/

@@ -2,6 +2,14 @@
   "name": "Platillo",
   "fields": [
     {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    },
+    {
       "fieldName": "fotoSrc",
       "fieldType": "String"
     },

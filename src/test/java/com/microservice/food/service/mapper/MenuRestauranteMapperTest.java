@@ -8,15 +8,15 @@ public class MenuRestauranteMapperTest {
 
     private MenuRestauranteMapper menuRestauranteMapper;
 
-    /*@BeforeEach
+   /* @BeforeEach
     public void setUp() {
         menuRestauranteMapper = new MenuRestauranteMapperImpl();
-    }
+    }*/
 
     @Test
     public void testEntityFromId() {
         Long id = 1L;
         assertThat(menuRestauranteMapper.fromId(id).getId()).isEqualTo(id);
         assertThat(menuRestauranteMapper.fromId(null)).isNull();
-    }*/
+    }
 }

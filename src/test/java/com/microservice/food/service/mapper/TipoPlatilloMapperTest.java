@@ -8,7 +8,7 @@ public class TipoPlatilloMapperTest {
 
     private TipoPlatilloMapper tipoPlatilloMapper;
 
-   /* @BeforeEach
+    /*@BeforeEach
     public void setUp() {
         tipoPlatilloMapper = new TipoPlatilloMapperImpl();
     }*/

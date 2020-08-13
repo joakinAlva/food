@@ -32,6 +32,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WithMockUser
 public class PlatilloResourceIT {
 
+    private static final String DEFAULT_NOMBRE = "AAAAAAAAAA";
+    private static final String UPDATED_NOMBRE = "BBBBBBBBBB";
+
+    private static final String DEFAULT_DESCRIPCION = "AAAAAAAAAA";
+    private static final String UPDATED_DESCRIPCION = "BBBBBBBBBB";
+
     private static final String DEFAULT_FOTO_SRC = "AAAAAAAAAA";
     private static final String UPDATED_FOTO_SRC = "BBBBBBBBBB";
 
@@ -66,6 +72,8 @@ public class PlatilloResourceIT {
      */
     public static Platillo createEntity(EntityManager em) {
         Platillo platillo = new Platillo()
+            .nombre(DEFAULT_NOMBRE)
+            .descripcion(DEFAULT_DESCRIPCION)
             .fotoSrc(DEFAULT_FOTO_SRC)
             .horario(DEFAULT_HORARIO)
             .precio(DEFAULT_PRECIO);
@@ -79,6 +87,8 @@ public class PlatilloResourceIT {
      */
     public static Platillo createUpdatedEntity(EntityManager em) {
         Platillo platillo = new Platillo()
+            .nombre(UPDATED_NOMBRE)
+            .descripcion(UPDATED_DESCRIPCION)
             .fotoSrc(UPDATED_FOTO_SRC)
             .horario(UPDATED_HORARIO)
             .precio(UPDATED_PRECIO);
@@ -105,6 +115,8 @@ public class PlatilloResourceIT {
         List<Platillo> platilloList = platilloRepository.findAll();
         assertThat(platilloList).hasSize(databaseSizeBeforeCreate + 1);
         Platillo testPlatillo = platilloList.get(platilloList.size() - 1);
+        assertThat(testPlatillo.getNombre()).isEqualTo(DEFAULT_NOMBRE);
+        assertThat(testPlatillo.getDescripcion()).isEqualTo(DEFAULT_DESCRIPCION);
         assertThat(testPlatillo.getFotoSrc()).isEqualTo(DEFAULT_FOTO_SRC);
         assertThat(testPlatillo.getHorario()).isEqualTo(DEFAULT_HORARIO);
         assertThat(testPlatillo.getPrecio()).isEqualTo(DEFAULT_PRECIO);
@@ -142,6 +154,8 @@ public class PlatilloResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(platillo.getId().intValue())))
+            .andExpect(jsonPath("$.[*].nombre").value(hasItem(DEFAULT_NOMBRE)))
+            .andExpect(jsonPath("$.[*].descripcion").value(hasItem(DEFAULT_DESCRIPCION)))
             .andExpect(jsonPath("$.[*].fotoSrc").value(hasItem(DEFAULT_FOTO_SRC)))
             .andExpect(jsonPath("$.[*].horario").value(hasItem(DEFAULT_HORARIO)))
             .andExpect(jsonPath("$.[*].precio").value(hasItem(DEFAULT_PRECIO.intValue())));
@@ -158,6 +172,8 @@ public class PlatilloResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.id").value(platillo.getId().intValue()))
+            .andExpect(jsonPath("$.nombre").value(DEFAULT_NOMBRE))
+            .andExpect(jsonPath("$.descripcion").value(DEFAULT_DESCRIPCION))
             .andExpect(jsonPath("$.fotoSrc").value(DEFAULT_FOTO_SRC))
             .andExpect(jsonPath("$.horario").value(DEFAULT_HORARIO))
             .andExpect(jsonPath("$.precio").value(DEFAULT_PRECIO.intValue()));
@@ -183,6 +199,8 @@ public class PlatilloResourceIT {
         // Disconnect from session so that the updates on updatedPlatillo are not directly saved in db
         em.detach(updatedPlatillo);
         updatedPlatillo
+            .nombre(UPDATED_NOMBRE)
+            .descripcion(UPDATED_DESCRIPCION)
             .fotoSrc(UPDATED_FOTO_SRC)
             .horario(UPDATED_HORARIO)
             .precio(UPDATED_PRECIO);
@@ -197,6 +215,8 @@ public class PlatilloResourceIT {
         List<Platillo> platilloList = platilloRepository.findAll();
         assertThat(platilloList).hasSize(databaseSizeBeforeUpdate);
         Platillo testPlatillo = platilloList.get(platilloList.size() - 1);
+        assertThat(testPlatillo.getNombre()).isEqualTo(UPDATED_NOMBRE);
+        assertThat(testPlatillo.getDescripcion()).isEqualTo(UPDATED_DESCRIPCION);
         assertThat(testPlatillo.getFotoSrc()).isEqualTo(UPDATED_FOTO_SRC);
         assertThat(testPlatillo.getHorario()).isEqualTo(UPDATED_HORARIO);
         assertThat(testPlatillo.getPrecio()).isEqualTo(UPDATED_PRECIO);

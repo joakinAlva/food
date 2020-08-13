@@ -11,6 +11,10 @@ public class PlatilloDTO implements Serializable {
     
     private Long id;
 
+    private String nombre;
+
+    private String descripcion;
+
     private String fotoSrc;
 
     private String horario;
@@ -30,6 +34,22 @@ public class PlatilloDTO implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public String getFotoSrc() {
@@ -102,6 +122,8 @@ public class PlatilloDTO implements Serializable {
     public String toString() {
         return "PlatilloDTO{" +
             "id=" + getId() +
+            ", nombre='" + getNombre() + "'" +
+            ", descripcion='" + getDescripcion() + "'" +
             ", fotoSrc='" + getFotoSrc() + "'" +
             ", horario='" + getHorario() + "'" +
             ", precio=" + getPrecio() +

@@ -25,6 +25,12 @@ public class Platillo implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "nombre")
+    private String nombre;
+
+    @Column(name = "descripcion")
+    private String descripcion;
+
     @Column(name = "foto_src")
     private String fotoSrc;
 
@@ -62,6 +68,32 @@ public class Platillo implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public Platillo nombre(String nombre) {
+        this.nombre = nombre;
+        return this;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public Platillo descripcion(String descripcion) {
+        this.descripcion = descripcion;
+        return this;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public String getFotoSrc() {
@@ -214,6 +246,8 @@ public class Platillo implements Serializable {
     public String toString() {
         return "Platillo{" +
             "id=" + getId() +
+            ", nombre='" + getNombre() + "'" +
+            ", descripcion='" + getDescripcion() + "'" +
             ", fotoSrc='" + getFotoSrc() + "'" +
             ", horario='" + getHorario() + "'" +
             ", precio=" + getPrecio() +

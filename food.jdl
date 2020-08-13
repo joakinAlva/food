@@ -14,6 +14,8 @@ entity MenuRestaurante {
 // an ignored comment
 /** not an ignored comment */
 entity Platillo {
+	nombre String,
+	descripcion String,
 	fotoSrc String,
 	horario String,
 	precio Long
