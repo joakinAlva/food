@@ -42,6 +42,10 @@ public class Platillo implements Serializable {
 
     @OneToMany(mappedBy = "platillo")
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+    private Set<PlatillosCombo> platillosCombos = new HashSet<>();
+
+    @OneToMany(mappedBy = "platillo")
+    @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     private Set<ExtrasPlatillo> extrasPlatillos = new HashSet<>();
 
     @ManyToOne
@@ -133,6 +137,31 @@ public class Platillo implements Serializable {
 
     public void setPrecio(Long precio) {
         this.precio = precio;
+    }
+
+    public Set<PlatillosCombo> getPlatillosCombos() {
+        return platillosCombos;
+    }
+
+    public Platillo platillosCombos(Set<PlatillosCombo> platillosCombos) {
+        this.platillosCombos = platillosCombos;
+        return this;
+    }
+
+    public Platillo addPlatillosCombo(PlatillosCombo platillosCombo) {
+        this.platillosCombos.add(platillosCombo);
+        platillosCombo.setPlatillo(this);
+        return this;
+    }
+
+    public Platillo removePlatillosCombo(PlatillosCombo platillosCombo) {
+        this.platillosCombos.remove(platillosCombo);
+        platillosCombo.setPlatillo(null);
+        return this;
+    }
+
+    public void setPlatillosCombos(Set<PlatillosCombo> platillosCombos) {
+        this.platillosCombos = platillosCombos;
     }
 
     public Set<ExtrasPlatillo> getExtrasPlatillos() {

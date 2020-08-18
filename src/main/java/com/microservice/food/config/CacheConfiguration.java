@@ -66,6 +66,10 @@ public class CacheConfiguration {
             createCache(cm, com.microservice.food.domain.OpcionesPlatillos.class.getName());
             createCache(cm, com.microservice.food.domain.OpcionPlatillo.class.getName());
             createCache(cm, com.microservice.food.domain.OpcionPlatillo.class.getName() + ".opcionesPlatillos");
+            createCache(cm, com.microservice.food.domain.Platillo.class.getName() + ".platillosCombos");
+            createCache(cm, com.microservice.food.domain.OpcionCombo.class.getName());
+            createCache(cm, com.microservice.food.domain.OpcionCombo.class.getName() + ".platillosCombos");
+            createCache(cm, com.microservice.food.domain.PlatillosCombo.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

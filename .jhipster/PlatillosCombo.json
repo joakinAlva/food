@@ -1,0 +1,37 @@
+{
+  "name": "PlatillosCombo",
+  "fields": [
+    {
+      "fieldName": "precio",
+      "fieldType": "Double"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "platillo",
+      "otherEntityRelationshipName": "platillosCombo",
+      "relationshipName": "platillo",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "opcionCombo",
+      "otherEntityRelationshipName": "platillosCombo",
+      "relationshipName": "opcionCombo",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200818002308",
+  "entityTableName": "platillos_combo",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "food",
+  "applications": "*",
+  "microserviceName": "food"
+}

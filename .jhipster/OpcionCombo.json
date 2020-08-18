@@ -1,0 +1,33 @@
+{
+  "name": "OpcionCombo",
+  "fields": [
+    {
+      "fieldName": "opcionCombo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cnatidad",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "platillosCombo",
+      "otherEntityRelationshipName": "opcionCombo",
+      "relationshipName": "platillosCombo"
+    }
+  ],
+  "changelogDate": "20200818002208",
+  "entityTableName": "opcion_combo",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "food",
+  "applications": "*",
+  "microserviceName": "food"
+}

@@ -52,6 +52,22 @@ entity OpcionPlatillo {
 	opcionPlatillo String
 }
 
+entity OpcionCombo {
+	opcionCombo String
+    cnatidad String
+}
+
+entity PlatillosCombo {
+	precio Double
+}
+
+relationship OneToMany {
+	Platillo{platillosCombo} to  PlatillosCombo{platillo}
+}
+relationship OneToMany {
+	OpcionCombo{platillosCombo} to  PlatillosCombo{opcionCombo}
+}
+
 relationship OneToMany {
 	OpcionPlatillo{opcionesPlatillos} to  OpcionesPlatillos{opcionPlatillo}
 }

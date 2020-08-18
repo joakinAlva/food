@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity PlatillosCombo.
+    -->
+    <changeSet id="20200818002308-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="platillo_id"
+                                 baseTableName="platillos_combo"
+                                 constraintName="fk_platillos_combo_platillo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="platillo"/>
+
+        <addForeignKeyConstraint baseColumnNames="opcion_combo_id"
+                                 baseTableName="platillos_combo"
+                                 constraintName="fk_platillos_combo_opcion_combo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="opcion_combo"/>
+
+    </changeSet>
+</databaseChangeLog>

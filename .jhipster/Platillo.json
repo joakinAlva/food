@@ -25,6 +25,12 @@
   "relationships": [
     {
       "relationshipType": "one-to-many",
+      "otherEntityName": "platillosCombo",
+      "otherEntityRelationshipName": "platillo",
+      "relationshipName": "platillosCombo"
+    },
+    {
+      "relationshipType": "one-to-many",
       "otherEntityName": "extrasPlatillo",
       "otherEntityRelationshipName": "platillo",
       "relationshipName": "extrasPlatillos"
