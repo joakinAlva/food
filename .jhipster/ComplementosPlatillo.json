@@ -1,0 +1,32 @@
+{
+  "name": "ComplementosPlatillo",
+  "fields": [],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "complemento",
+      "otherEntityRelationshipName": "complementosPlatillos",
+      "relationshipName": "complemento",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "platillo",
+      "otherEntityRelationshipName": "complementosPlatillo",
+      "relationshipName": "platillo",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200818012831",
+  "entityTableName": "complementos_platillo",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "food",
+  "applications": "*",
+  "microserviceName": "food"
+}

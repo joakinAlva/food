@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity ComplementosPlatillo.
+    -->
+    <changeSet id="20200818012831-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="complemento_id"
+                                 baseTableName="complementos_platillo"
+                                 constraintName="fk_complementos_platillo_complemento_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="complemento"/>
+
+        <addForeignKeyConstraint baseColumnNames="platillo_id"
+                                 baseTableName="complementos_platillo"
+                                 constraintName="fk_complementos_platillo_platillo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="platillo"/>
+
+    </changeSet>
+</databaseChangeLog>
