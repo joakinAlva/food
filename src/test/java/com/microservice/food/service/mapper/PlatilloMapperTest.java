@@ -8,10 +8,10 @@ public class PlatilloMapperTest {
 
     private PlatilloMapper platilloMapper;
 
-    @BeforeEach
+   /* @BeforeEach
     public void setUp() {
         platilloMapper = new PlatilloMapperImpl();
-    }
+    }*/
 
     @Test
     public void testEntityFromId() {

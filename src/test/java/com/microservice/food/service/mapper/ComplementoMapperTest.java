@@ -7,11 +7,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ComplementoMapperTest {
 
     private ComplementoMapper complementoMapper;
-
+    /*
     @BeforeEach
     public void setUp() {
         complementoMapper = new ComplementoMapperImpl();
-    }
+    }*/
 
     @Test
     public void testEntityFromId() {
