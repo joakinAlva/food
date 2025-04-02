@@ -21,7 +21,7 @@ import java.util.Optional;
  * REST controller for managing {@link com.microservice.food.domain.CategoriaPlatillo}.
  */
 @RestController
-@RequestMapping("/api")
+@RequestMapping("//api")
 public class CategoriaPlatilloResource {
 
     private final Logger log = LoggerFactory.getLogger(CategoriaPlatilloResource.class);
